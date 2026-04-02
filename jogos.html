@@ -5,20 +5,39 @@
     <meta charset="UTF-8">
     <title>Resident Evil - Jogos</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
     
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 <body data-page="jogos">
 
-<header class="header">
-  <h1><a href="home.html">RESIDENT EVIL: GUIA</a></h1>
+<header class="header navbar navbar-expand-lg">
+  <div class="container">
 
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <a class="navbar-brand text-white" href="home.html">
+      RESIDENT EVIL: GUIA
+    </a>
 
-  <nav class="menu" id="menu">
-    <a href="jogos.html">JOGOS</a>
-    <a href="personagens.html">PERSONAGENS</a>
-    <a href="timeline.html">LINHA DO TEMPO</a>
-  </nav>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      ☰
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="menu">
+      <ul class="navbar-nav text-end">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="jogos.html">Jogos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="personagens.html">Personagens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="timeline.html">Linha do Tempo</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
 </header>
 
 <!-- ===================== -->
@@ -27,53 +46,73 @@
 <main class="section">
   <h5>JOGOS</h5>
 
-  <div class="grid-jogos">
+  <div class="container">
+    <div class="row g-3">
 
-    <div class="jogo-card" onclick="abrirModal(0)">
-      <img src="img/jogos/RE1R_card.jpg" class="jogo-card-img">
-      <p>Resident Evil 1</p>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="jogo-card" onclick="abrirModal(0)">
+          <img src="img/jogos/RE1R_card.jpg" class="jogo-card-img">
+          <p>Resident Evil 1</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="jogo-card" onclick="abrirModal(1)">
+          <img src="img/jogos/RE2R_card.jpg" class="jogo-card-img">
+          <p>Resident Evil 2</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="jogo-card" onclick="abrirModal(2)">
+          <img src="img/jogos/RE3R_card.jpg" class="jogo-card-img">
+          <p>Resident Evil 3</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="jogo-card" onclick="abrirModal(3)">
+          <img src="img/jogos/RE4R_card.jpg" class="jogo-card-img">
+          <p>Resident Evil 4</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="jogo-card" onclick="abrirModal(4)">
+          <img src="img/jogos/RE5_card.jpg" class="jogo-card-img">
+          <p>Resident Evil 5</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="jogo-card" onclick="abrirModal(5)">
+          <img src="img/jogos/RE6_card.jpg" class="jogo-card-img">
+          <p>Resident Evil 6</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="jogo-card" onclick="abrirModal(6)">
+          <img src="img/jogos/RE7_card.jpg" class="jogo-card-img">
+          <p>Resident Evil 7: Biohazard</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="jogo-card" onclick="abrirModal(7)">
+          <img src="img/jogos/RE8_card.jpg" class="jogo-card-img">
+          <p>Resident Evil Village</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="jogo-card" onclick="abrirModal(8)">
+          <img src="img/jogos/RE9_card.jpg" class="jogo-card-img">
+          <p>Resident Evil Requiem</p>
+        </div>
+      </div>
+
     </div>
-
-    <div class="jogo-card" onclick="abrirModal(1)">
-      <img src="img/jogos/RE2R_card.jpg" class="jogo-card-img">
-      <p>Resident Evil 2</p>
-    </div>
-
-    <div class="jogo-card" onclick="abrirModal(2)">
-      <img src="img/jogos/RE3R_card.jpg" class="jogo-card-img">
-      <p>Resident Evil 3</p>
-    </div>
-
-    <div class="jogo-card" onclick="abrirModal(3)">
-      <img src="img/jogos/RE4R_card.jpg" class="jogo-card-img">
-      <p>Resident Evil 4</p>
-    </div>
-
-    <div class="jogo-card" onclick="abrirModal(4)">
-      <img src="img/jogos/RE5_card.jpg" class="jogo-card-img">
-      <p>Resident Evil 5</p>
-    </div>
-
-    <div class="jogo-card" onclick="abrirModal(5)">
-      <img src="img/jogos/RE6_card.jpg" class="jogo-card-img">
-      <p>Resident Evil 6</p>
-    </div>
-
-    <div class="jogo-card" onclick="abrirModal(6)">
-      <img src="img/jogos/RE7_card.jpg" class="jogo-card-img">
-      <p>Resident Evil 7: Biohazard</p>
-    </div>
-
-    <div class="jogo-card" onclick="abrirModal(7)">
-      <img src="img/jogos/RE8_card.jpg" class="jogo-card-img">
-      <p>Resident Evil Village</p>
-    </div>
-
-    <div class="jogo-card" onclick="abrirModal(8)">
-      <img src="img/jogos/RE9_card.jpg" class="jogo-card-img">
-      <p>Resident Evil Requiem</p>
-    </div>
-
   </div>
 </main>
 
