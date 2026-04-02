@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Resident Evil - Personagens</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+    
+<body data-page="personagens">
+
+<header class="header">
+  <h1><a href="home.html">RESIDENT EVIL: GUIA</a></h1>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <nav class="menu" id="menu">
+    <a href="jogos.html">JOGOS</a>
+    <a href="personagens.html">PERSONAGENS</a>
+    <a href="timeline.html">LINHA DO TEMPO</a>
+  </nav>
+</header>
+
+<!-- ===================== -->
+<!-- Cards de Personages   -->
+<!-- ===================== -->
+<main class="section">
+  <h5>PERSONAGENS</h5>
+
+  <div class="grid-personagens">
+
+    <div class="personagem-card" onclick="abrirModal(0)">
+      <img src="img/personagens/chris_icon.png" class="personagem-card-img">
+      <p>CHRIS</p>
+    </div>
+
+    <div class="personagem-card" onclick="abrirModal(1)">
+      <img src="img/personagens/jill_icon.png" class="personagem-card-img">
+      <p>JILL</p>
+    </div>
+
+    <div class="personagem-card" onclick="abrirModal(2)">
+      <img src="img/personagens/leon_icon.png" class="personagem-card-img">
+      <p>LEON</p>
+    </div>
+
+    <div class="personagem-card" onclick="abrirModal(3)">
+      <img src="img/personagens/claire_icon.png" class="personagem-card-img">
+      <p>CLAIRE</p>
+    </div>
+
+    <div class="personagem-card" onclick="abrirModal(4)">
+      <img src="img/personagens/ada_icon.png" class="personagem-card-img">
+      <p>ADA</p>
+    </div>
+
+    <div class="personagem-card" onclick="abrirModal(5)">
+      <img src="img/personagens/wesker_icon.png" class="personagem-card-img">
+      <p>WESKER</p>
+    </div>
+
+    <div class="personagem-card" onclick="abrirModal(6)">
+      <img src="img/personagens/ethan_icon.png" class="personagem-card-img">
+      <p>ETHAN</p>
+    </div>
+
+    <div class="personagem-card" onclick="abrirModal(7)">
+      <img src="img/personagens/grace_icon.png" class="personagem-card-img">
+      <p>GRACE</p>
+    </div>
+
+    <div class="personagem-card" onclick="abrirModal(8)">
+      <img src="img/personagens/barry_icon.png" class="personagem-card-img">
+      <p>BARRY</p>
+    </div>
+
+    <div class="personagem-card" onclick="abrirModal(9)">
+      <img src="img/personagens/rebecca_icon.png" class="personagem-card-img">
+      <p>REBECCA</p>
+    </div>
+
+  </div>
+</main>
+
+<!-- ===================== -->
+<!-- MODAL                 -->
+<!-- ===================== -->
+<div class="modal" id="modal">
+
+  <div class="modal-content">
+
+    <span class="fechar" onclick="fecharModal()">×</span>
+
+    <button class="seta esquerda" onclick="mudarPersonagem(-1)">
+      <
+      <img id="prev-thumb">
+    </button>
+
+    <button class="seta direita" onclick="mudarPersonagem(1)">
+      <img id="next-thumb">
+      ❯      
+    </button>
+
+    <div class="modal-body">
+
+      <div class="img-bloco">
+        
+        <div class="img-container">
+          <img id="modal-p-img">
+        </div>
+
+        <div class="versao">
+          <button class="sversao esquerda" onclick="trocarVersao(-1)">❮</button>
+          <p id="legenda"></p>
+          <button class="sversao direita" onclick="trocarVersao(1)">❯</button>
+        </div>
+ 
+      </div>
+
+      <div class="modal-info">
+        <h2 id="nome"></h2>
+        <h3 id="subtitulo"></h3>
+        <p id="descricao"></p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="./script.js"></script>
+  
+</body>
+  
+</html>
